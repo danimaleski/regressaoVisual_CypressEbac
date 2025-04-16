@@ -1,0 +1,7 @@
+#dependencies
+node_modules/ 
+mochawesome-report/
+TestReport/
+cypress/report
+cypress/snapshots
+cypress/screenshots

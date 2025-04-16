@@ -1,0 +1,37 @@
+{
+  "name": "cy-lens",
+  "version": "1.0.0",
+  "description": "Testes de Regressão Visual",
+  "homepage": "https://github.com/danimaleski/variaveis_ambiente_ebac#readme",
+  "bugs": {
+    "url": "https://github.com/danimaleski/variaveis_ambiente_ebac/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danimaleski/variaveis_ambiente_ebac.git"
+  },
+  "license": "ISC",
+  "author": "daniella",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "testEnvCyOpen": "CYPRESS_HOST=http://localhost npx cypress open",
+    "testEnvCmdCyOpen": "npx cypress open --env HOST=http://localhost",
+    "report": "npm run mergeJsonReport && npm run generateReport",
+    "mergeJsonReport": "npx mochawesome-merge ./mochawesome-report/*.json -o ./mochawesome-report/result.json",
+    "generateReport": "npx marge ./mochawesome-report/result.json -o ./mochawesome-report"
+  },
+  "devDependencies": {
+    "cypress": "^14.3.0"
+  },
+  "dependencies": {
+    "cypress-html-reporter": "^11.0.0",
+    "cypress-lens": "^1.15.1",
+    "dotenv": "^16.5.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "puppeteer": "^24.6.1",
+    "puppeteer-core": "^24.6.1"
+  }
+}
